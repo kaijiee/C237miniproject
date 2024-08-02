@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Edit Event</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Event Management and Ticketing app</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/addEvent">Add New Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addTicket">Add New Ticket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addAttendee">Add New Attendee</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <br>
+    <h2>Edit Event</h2>
+    <form action="editEvent" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Event Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+      <div class="mb-3">
+        <label for="venue" class="form-label">Venue</label>
+        <input type="text" class="form-control" id="venue" name="venue" required>
+      </div>
+      <div class="mb-3">
+        <label for="speakers" class="form-label">Speakers</label>
+        <input type="text" class="form-control" id="speakers" name="speakers" required>
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" class="form-control" id="time" name="time" required>
+      </div>
+      <div class="mb-3">
+        <label for="cost" class="form-label">Cost</label>
+        <input type="number" step="0.01" class="form-control" id="cost" name="cost" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Event</button>
+      <a href="/" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</body>
+</html>

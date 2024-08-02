@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Attendees</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <h1>Manage Attendees</h1>
+    <ul>
+        <% attendees.forEach(attendee => { %>
+            <li>
+                <p>Name: <%= attendee.name %></p>
+                <p>Email: <%= attendee.email %></p>
+                <p>Phone: <%= attendee.phone %></p>
+                <p>Event ID: <%= attendee.event_id %></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
